@@ -21,11 +21,11 @@ function fetchGames(round) {
 
                 // Se rodada = 1 então botão esquerdo não exibe
                 const prevRound = document.getElementById("prevRound");
-                round <= 1 ? prevRound.style.display = 'none' : prevRound.style.display = 'block'
+                round <= 1 ? prevRound.classList.add('hidden') : prevRound.classList.remove('hidden')
 
                 // Se rodada = maxRounds então botão direito não exibe
                 const nextRound = document.getElementById("nextRound");
-                round >= maxRounds ? nextRound.style.display = 'none' : nextRound.style.display = 'block'
+                round >= maxRounds ? nextRound.classList.add('hidden') : nextRound.classList.remove('hidden') 
 
                 // Itera sobre os jogos e cria o HTML para cada um
                 roundData.games.forEach(game => {

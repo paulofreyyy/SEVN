@@ -51,13 +51,14 @@ main section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-        overflow-y: auto;
+    overflow-y: auto;
 }
 
 .sectionHeader {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .sectionHeader button {
@@ -71,10 +72,15 @@ main section {
     color: #FFFFFF;
     cursor: pointer;
     line-height: 1px;
+    position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
 }
+
 
 .sectionTitle {
     text-align: center;
+    flex: 1;
 }
 
 .sectionTitle p {
@@ -101,25 +107,39 @@ main section {
     width: 100%;
     font-weight: 700;
     font-size: 12px;
-    }
-    
-    .score {
-        display: flex;
-        flex-direction: row;
-        font-size: 15px;
-        align-items: center;
-    }
-    
-    .score span {
-        color: #D1D1D1;
-        margin: 0 15px;
-    }
-    
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    align-items: center;
+}
+
+.score span {
+    color: #D1D1D1;
+    margin: 0 15px;
+}
 .teamInfos {
     display: flex;
     gap: 10px;
     align-items: center;
 }
+/* Button hidden */
+.hidden {
+    display: none;
+}
+
+/* Ajuste dos botões */
+#prevRound {
+    left: 10px;
+}
+
+#nextRound {
+    right: 10px;
+}
+
+/* SVG COLORS */
 #time-a {
     --color-stop: #FF0000;
 }
