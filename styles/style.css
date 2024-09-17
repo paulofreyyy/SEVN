@@ -50,7 +50,7 @@ main section {
     padding: 20px;
     display: flex;
     flex-direction: column;
-        justify-content: space-between;
+    justify-content: space-between;
         overflow-y: auto;
 }
 
@@ -100,7 +100,7 @@ main section {
     justify-content: space-around;
     width: 100%;
     font-weight: 700;
-        font-size: 12px;
+    font-size: 12px;
     }
     
     .score {
@@ -115,8 +115,39 @@ main section {
         margin: 0 15px;
     }
     
-    .teamInfos {
-        display: flex;
-        gap: 10px;
-        align-items: center;
+.teamInfos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#time-a {
+    --color-stop: #FF0000;
+}
+
+#time-b {
+    --color-stop: #0038FF;
+}
+
+#time-c {
+    --color-stop: #FF9900;
+}
+
+#time-d {
+    --color-stop: #72CB00;
+}
+
+#time-e {
+    --color-stop: #00C797;
+}
+
+#time-f {
+    --color-stop: #0088D4;
+}
+
+#time-g {
+    --color-stop: #AD00FF;
+}
+
+#time-h {
+    --color-stop: #FF00E5;
 }
