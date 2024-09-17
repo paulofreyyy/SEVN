@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter';
+}
+
+header {
+    background: #33B667;
+    width: 100%;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header p {
+    line-height: 27px;
+    font-weight: 900;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Matches Container */
+
+main h1 {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 31px;
+    top: 258px;
+}
+
+main section {
+    width: 340px;
+    height: 394px;
+    border-radius: 10px;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sectionHeader button {
+    background-color: #33B667;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+}
