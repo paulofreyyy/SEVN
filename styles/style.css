@@ -48,6 +48,10 @@ main section {
     border-radius: 10px;
     border: 1px solid #DDDDDD;
     padding: 20px;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: auto;
 }
 
 .sectionHeader {
@@ -67,18 +71,28 @@ main section {
     color: #FFFFFF;
     cursor: pointer;
     line-height: 1px;
-    }
-    
-    .roundTitle {
-        text-align: center;
-    }
-    
-    .roundTitle p {
-        font-weight: 400;
-        font-size: 16px;
-    }
-    
-    .roundTitle p:nth-child(2) {
-        font-weight: 700;
-        font-size: 12px;
+}
+.sectionTitle {
+    text-align: center;
+}
+.sectionTitle p {
+    font-weight: 400;
+    font-size: 16px;
+}
+#roundTitle {
+    font-weight: 700;
+    font-size: 12px;
+}
+#matches {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.gameLine {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
