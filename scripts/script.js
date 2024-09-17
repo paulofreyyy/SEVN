@@ -3,7 +3,6 @@ const roundTitle = document.getElementById('roundTitle');
 let currentRound = 1;
 let maxRounds = 0;
 
-// Função para buscar os jogos da rodada atual
 function fetchGames(round) {
     fetch('https://sevn-pleno-esportes.deno.dev/')
         .then(response => response.json())
@@ -17,9 +16,16 @@ function fetchGames(round) {
             // Encontra o número máximo de rodadas
             maxRounds = data.length;
 
-            // Se existir a rodada, exibe os jogos
             if (roundData && roundData.games && roundData.games.length > 0) {
-                roundTitle.textContent = `RODADA ${round}`; // Atualiza o título da rodada
+                roundTitle.textContent = `RODADA ${round}`;
+
+                // Se rodada = 1 então botão esquerdo não exibe
+                const prevRound = document.getElementById("prevRound");
+                round <= 1 ? prevRound.style.display = 'none' : prevRound.style.display = 'block'
+
+                // Se rodada = maxRounds então botão direito não exibe
+                const nextRound = document.getElementById("nextRound");
+                round >= maxRounds ? nextRound.style.display = 'none' : nextRound.style.display = 'block'
 
                 // Itera sobre os jogos e cria o HTML para cada um
                 roundData.games.forEach(game => {
@@ -62,7 +68,6 @@ function fetchGames(round) {
                     matchesDiv.appendChild(gameDiv);
                 });
             } else {
-                // Caso não tenha jogos, exibe uma mensagem
                 matchesDiv.innerHTML = '<p>Nenhum jogo encontrado para essa rodada.</p>';
             }
         })
