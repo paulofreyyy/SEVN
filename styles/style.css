@@ -49,7 +49,7 @@ main section {
     border: 1px solid #DDDDDD;
     padding: 20px;
     display: flex;
-        flex-direction: column;
+    flex-direction: column;
         justify-content: space-between;
         overflow-y: auto;
 }
@@ -72,17 +72,21 @@ main section {
     cursor: pointer;
     line-height: 1px;
 }
+
 .sectionTitle {
     text-align: center;
 }
+
 .sectionTitle p {
     font-weight: 400;
     font-size: 16px;
 }
+
 #roundTitle {
     font-weight: 700;
     font-size: 12px;
 }
+
 #matches {
     display: flex;
     margin-top: 10px;
@@ -95,4 +99,24 @@ main section {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    font-weight: 700;
+        font-size: 12px;
+    }
+    
+    .score {
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        align-items: center;
+    }
+    
+    .score span {
+        color: #D1D1D1;
+        margin: 0 15px;
+    }
+    
+    .teamInfos {
+        display: flex;
+        gap: 10px;
+        align-items: center;
 }

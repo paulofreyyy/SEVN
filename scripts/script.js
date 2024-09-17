@@ -24,9 +24,21 @@ function fetchGames(round) {
 
                     gameDiv.innerHTML = `
                         <div class="gameLine">
-                        <strong>${game.team_home_name}</strong>
-                        <div>${game.team_home_score} X ${game.team_away_score}</div>
-                        <strong>${game.team_away_name}</strong>
+                            <div class='teamInfos'>
+                                <img src='./assets/team_shield.svg' class='svg-icon'/>
+                                <p>${game.team_home_name}</p>
+                            </div>
+
+                            <div class="score">
+                                <p>${game.team_home_score}</p>
+                                <span>X</span>
+                                <p>${game.team_away_score}</p>
+                            </div>
+
+                            <div class='teamInfos'>
+                                <p>${game.team_away_name}</p>
+                                <img src='./assets/team_shield.svg' />
+                            </div>
                         </div>
                     `;
                     matchesDiv.appendChild(gameDiv);
