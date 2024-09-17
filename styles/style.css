@@ -47,7 +47,7 @@ main section {
     height: 394px;
     border-radius: 10px;
     border: 1px solid #DDDDDD;
-    padding: 10px;
+    padding: 20px;
 }
 
 .sectionHeader {
@@ -59,9 +59,26 @@ main section {
 .sectionHeader button {
     background-color: #33B667;
     border-radius: 5px;
+    text-align: center;
     width: 30px;
     height: 30px;
+    font-size: 22px;
     border: none;
     color: #FFFFFF;
     cursor: pointer;
+    line-height: 1px;
+    }
+    
+    .roundTitle {
+        text-align: center;
+    }
+    
+    .roundTitle p {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    .roundTitle p:nth-child(2) {
+        font-weight: 700;
+        font-size: 12px;
 }
