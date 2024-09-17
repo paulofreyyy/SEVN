@@ -1,6 +1,7 @@
 const matchesDiv = document.getElementById('matches');
 const roundTitle = document.getElementById('roundTitle');
 let currentRound = 1;
+let maxRounds = 0;
 
 // Função para buscar os jogos da rodada atual
 function fetchGames(round) {
@@ -12,6 +13,9 @@ function fetchGames(round) {
 
             // Encontra a rodada correspondente
             const roundData = data.find(r => r.round === round);
+
+            // Encontra o numero maximo de rodadas
+            maxRounds = data.length;
 
             // Se existir a rodada, exibe os jogos
             if (roundData && roundData.games && roundData.games.length > 0) {
@@ -62,8 +66,10 @@ document.getElementById('prevRound').addEventListener('click', () => {
 });
 
 document.getElementById('nextRound').addEventListener('click', () => {
-    currentRound++;
-    fetchGames(currentRound);
+    if (currentRound < maxRounds) {
+        currentRound++;
+        fetchGames(currentRound);
+    }
 });
 
 // Carregar a primeira rodada ao carregar a página
